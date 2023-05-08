@@ -1,0 +1,27 @@
+/* Відключення виводу шапки та підвалу сайту */
+header, footer {
+  display: none !important;
+}
+
+/* Встановлення полів для друку */
+body {
+  margin: 50px;
+}
+
+/* Задання шрифту з засіками для тексту */
+body, h1, h2, h3, h4, h5, h6, p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Відображення повного URL-адреси */
+a::after {
+  content: " (" attr(href) ") ";
+}
+
+/* Видалення фонових зображень та кольорів */
+* {
+  background: none !important;
+  color: black !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

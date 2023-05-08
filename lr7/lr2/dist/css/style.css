@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.container {
+  max-width: 1200px;
+  /* зафіксована ширина контенту */
+  margin: 0 auto;
+  /* автоматичний вирівнювання по центру */ }
+
+/* Медіа запит для екранів меншої ширини */
+@media screen and (max-width: 960px) {
+  /* Задаємо відносну ширину виводу контенту */
+  .container {
+    width: 90%;
+    margin: 0 auto; } }
+
+/* Медіа запит для екранів меншої ширини */
+@media screen and (max-width: 768px) {
+  /* Змінюємо меню на вертикальне */
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; }
+  /* Задаємо відносну ширину для елементів меню */
+  .main-menu li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; }
+  /* Задаємо висоту шапки сайту */
+  header {
+    height: 150px; } }
+
+/* Медіа запит для Internet Explorer 10 та нижчих версій */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Відображаємо приховане повідомлення */
+  .ie-message {
+    display: block; } }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #F6F69C;
+  background: linear-gradient(to bottom, #E6E617, #9A9A3D, #7B7B04, #F6F662, #F6F69C);
+  text-shadow: 1px 1px 0 black, 0px 0px 0 black;
+  margin: 0;
+  padding: 0 20px;
+  /* відступи зліва та права */ }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black; }
+
+h1 {
+  font-size: 36px;
+  color: #E6E617; }
+
+h2 {
+  font-size: 24px;
+  color: #9A9A3D; }
+
+h3 {
+  font-size: 18px;
+  color: #7B7B04; }
+
+a {
+  color: #9A9A3D;
+  text-decoration: none;
+  border-bottom: 2px solid #9A9A3D;
+  transition: all 0.2s ease-in-out; }
+  a:hover {
+    color: #E6E617;
+    border-bottom-color: #E6E617; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+li {
+  margin-bottom: 10px; }
