@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: #ffffff;
+        }
+
+.expense-form__container {
+    background-color: #b4a7d6;
+    text-align: center;
+    width: 100%;
+    max-width: 60%;
+    margin: 0 20% 0 20%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .expense-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .expense-form button {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .expense-form button:hover {
+    background-color: #8e24aa;
+  }
+
+  .expense-form__row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .expense-form__row label {
+    font-weight: bold;
+  }
+
+  .expense-form__row input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .expense-form__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+        .chart {
+            background-color: #f0d8f2;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 10rem;
+            max-width: 95%;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .chart > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% / 12);
+        }
+
+        .chart-bar {
+            height: 50%;
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .chart-bar__fill {
+            height: 0;
+            width: 100%;
+            background-color: #40005d;
+            transition: height 0.3s;
+        }
+            .chart-bar__inner {
+            width: 100%;
+            background-color: #5f97e6;
+            border-radius: 5px 5px 0 0;
+            transition: height 0.3s ease-out;
+        }
+
+        .chart-bar__label {
+            font-size: 0.75rem;
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+
+        .expenses-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+            margin: 20px 20% 0 20%;
+        }
+
+        .expenses-chart {
+            flex: 1 1 50%;
+        }
+
+        .expenses-list {
+            flex: 1 1 50%;
+        }
+
+        .expense-date {
+            display: flex;
+            flex-direction: column;
+            width: 5.5rem;
+            height: 5.5rem;
+            border: 1px solid #ececec;
+            background-color: #2a2a2a;
+            color: white;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .expense-date__month {
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .expense-date__year {
+            font-size: 0.75rem;
+        }
+
+        .expense-date__day {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        .expense-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            background-color: #4b4b4b;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .expense-item__description {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 1rem;
+            gap: 1rem;
+            align-items: flex-end;
+            flex-flow: column-reverse;
+            justify-content: flex-start;
+            flex: 1 1;
+        }
+
+        .expense-item h2 {
+            color: #3a3a3a;
+            font-size: 1rem;
+            flex: 1 1;
+            margin: 0 1rem;
+            color: white;
+        }
+
+        .expense-item__price {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #40005d;
+            border: 1px solid white;
+            padding: 0.5rem;
+            border-radius: 12px;
+        }
+
+        @media (min-width: 580px) {
+            .expense-item__description {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                flex: 1 1;
+            }
+
+            .expense-item__description h2 {
+                font-size: 1.25rem;
+            }
+
+            .expense-item__price {
+                font-size: 1.25rem;
+                padding: 0.5rem 1.5rem;
+            }
+        }
+
+        .expenses {
+            /*padding: 1rem;*/
+            margin: 0rem auto;
+            max-width: 95%;
+        }
+    </style>
+</head>
+<body>
+<h2>My Expenses tempalte</h2>
+<div id="root"></div>
+<script src="index.js"></script>
+</body>
+</html>
